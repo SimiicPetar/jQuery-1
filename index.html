@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		
+		
+		$(function(){
+				$('#Left').click(function(){
+					var px=document.getElementById('px').value;
+					
+					
+				$('#div').animate({
+				left:px+'px'
+			});
+
+				
+		});
+				});
+		$(function(){
+					$('#Right').click(function(){
+var px=document.getElementById('px').value;
+						
+					
+					
+				
+					
+					
+				$('.div').animate({
+				left:1350-px+'px'
+			});
+			
+		});
+	});
+		$(function(){
+			
+				
+				$('#Top').click(function(){
+					
+					var px=document.getElementById('px').value;
+
+				$('.div').animate({
+				top:px+'px'
+			});
+			
+		});
+	});
+		$(function(){
+			
+				$('#Bottom').click(function(){
+					
+					var px=document.getElementById('px').value;
+					
+				$('.div').animate({
+				top:712-px+'px'
+			});
+				
+		});
+	});
+
+		///////////////////////////////////////////////////////////////////
+		$(function(){
+		
+		
+			
+			$('#Left').click(function(){
+				
+				$('#Bottom').click(function(){
+				var Bottom=document.getElementById('px').value;
+				var Left=document.getElementById('px').value;
+
+
+				if(Left<675){
+				if(Bottom>356 ){
+				
+				$('.div').css('background-color','blue');
+				Bottom=0;
+				Left=0;
+			}
+			else if(Bottom<356  ) {
+					$('.div').css('background-color','green');
+					Bottom=0;
+					Left=0;
+
+				
+			}
+}
+			});
+				//rezolucija slike
+				
+				$('#Top').click(function(){
+				var Top=document.getElementById('px').value;
+				var Left=document.getElementById('px').value;
+				if(Left<675){
+				if(Top<356 ){
+				
+				$('.div').css('background-color','blue');
+				Top=0;
+			}
+			else if(Top>356 ) {
+					$('.div').css('background-color','green');
+					Top=0;
+				}
+				
+				}
+			});
+
+
+
+
+
+			});
+				});
+////////////////////////////////////////////
+	$(function(){
+		
+		
+			
+			$('#Right').click(function(){
+				
+				$('#Bottom').click(function(){
+				var Bottom=document.getElementById('px').value;
+				var Right=document.getElementById('px').value;
+
+
+				
+				if(Bottom>356 && Right>675){
+				
+				$('.div').css('background-color','blue');
+				Bottom=0;
+				Right=0;
+			}
+			else if(Bottom<356 && Right>675) {
+					$('.div').css('background-color','green');
+					Bottom=0;
+					Right=0;
+
+				
+			}
+
+			});
+				
+				$('#Top').click(function(){
+				var Top=document.getElementById('px').value;
+				var Right=document.getElementById('px').value;
+
+				if(Top<356 && Right>675){
+				
+				$('.div').css('background-color','blue');
+				Top=0;
+					Right=0;
+			}
+			else if(Top>356 && Right>675) {
+					$('.div').css('background-color','green');
+					Top=0;
+						Right=0;
+				}
+				
+
+			});
+			});
+	});
+			////////////////////////////////////////////////////
+			$(function(){
+		
+	
+			
+			$('#Bottom').click(function(){
+				
+				$('#Right').click(function(){
+				var Bottom=document.getElementById('px').value;
+				var Right=document.getElementById('px').value;
+
+
+				if(Bottom<356){
+				if( Right<675){
+				
+				$('.div').css('background-color','yellow');
+					Bottom=0;
+					Right=0;
+			}
+			
+				};
+			});
+				
+				$('#Left').click(function(){
+				var Bottom=document.getElementById('px').value;
+				var Left=document.getElementById('px').value;
+
+				if(Bottom<356){
+				if(Left<675){
+				
+				$('.div').css('background-color','green');
+				Bottom=0;
+					Left=0;
+			}
+			
+				}
+
+			});
+			});
+	});
+			////////////////////////////////////////////////.////
+			$(function(){
+		
+	
+			
+			$('#Top').click(function(){
+				
+				$('#Right').click(function(){
+				var Top=document.getElementById('px').value;
+				var Right=document.getElementById('px').value;
+
+
+				if(Top<356){
+				if( Right<675){
+				
+				$('.div').css('background-color','red');
+					
+					Right=0;
+			}
+			
+			
+				};
+				if(Top>356){
+					$('.div').css('background-color','yellow');
+			}
+			});
+				
+				$('#Left').click(function(){
+				var Top=document.getElementById('px').value;
+				var Left=document.getElementById('px').value;
+
+				if(Top<356){
+				if(Left<675){
+				
+				$('.div').css('background-color','blue');
+			
+					Left=0;
+			}
+			if(Top>356){
+					$('.div').css('background-color','yellow');
+
+				}
+			
+			
+				}
+
+			});
+			});
+	});
+
+
+
+	</script>
+</head>
+<body>
+	
+	<br><br>
+	<button id="Top" style="border-radius: 10px;" >Top</button>
+	<button id="Right" style="border-radius: 10px;" >Right</button>
+	<button id="Bottom" style="border-radius: 10px;" >Bottom</button>
+	<button id="Left" style="border-radius: 10px;" >Left</button>
+
+<p>Upisite broj</p><input id="px" type="text" >
+	<br><br>
+	<br><br>
+
+	<div id="div" class="div" style="background-color: red;height: 80px;width: 80px;position: absolute;"></div>
+	
+
+	
+
+</body>
+</html>
+
+
+
